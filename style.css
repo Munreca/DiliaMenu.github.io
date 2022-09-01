@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #99a8b5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #99a8b5, #e9ecea);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #99a8b5, #e9ecea); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /*background-color: #e9ecea;*/
+    color: rgb(12, 12, 12);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                         "contenido contenido sidebar"
+                         "caracteristicas caracteristicas sidebar"
+                         "footer footer footer";
+}
+
+.contenedor > div, .contenedor .header, .contenedor .contenido, .contenedor .recetas, .contenedor .sidebar{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.contenedor .footer{
+    background:  rgb(12, 12, 12);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,  rgb(12, 12, 12), rgb(24, 24, 24));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(12, 12, 12), rgb(24, 24, 24)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* background-color: rgb(211, 60, 60);*/
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contenedor .contenido{
+    height: 500px;
+    overflow: auto;
+    grid-area: contenido;
+    box-shadow: 0px 0px 16px 0px rgb(54, 54, 54);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.contenedor .header {
+    background: #F00000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F00000, #de4840);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F00000, #de4840); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /*background: rgb(211, 60, 60);*/
+    color: #fff;
+    grid-area: header;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 8px 0px rgb(54, 54, 54);
+}
+
+
+.contenedor .sidebar{
+    background: #c18031;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #c18031);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #c18031); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    display: flex;
+    text-align: start;
+    justify-content: start;
+    font-size: 1.7em;
+    color: #fff;
+    grid-area: sidebar;
+    box-shadow: 0px 0px 8px 0px rgb(54, 54, 54);
+}
+.sobre-nosotros{
+    margin-bottom: 40px;
+}
+.parrafo-sidebar{
+    padding: 20px;
+}
+
+a{
+    width: 180px;
+    height: 50px;
+    background: #F00000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F00000, #de4840);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F00000, #de4840); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* background-color: rgb(211, 60, 60);*/
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 6px;
+}
+.contenedor .sidebar, a{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+a:hover{
+    background: #cd0505;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cd0505, #b94a44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cd0505, #b94a44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contenedor .caracteristicas {
+    grid-area: caracteristicas;
+    height: 200px;
+    color: rgb(255, 255, 255);
+    background:  rgb(47, 163, 47);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,  rgb(47, 163, 47), rgb(56, 199, 56));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(47, 163, 47), rgb(56, 199, 56)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* background-color: rgb(211, 60, 60);*/
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0px 0px 8px 0px rgb(54, 54, 54);
+    /*background-image: url("https://i.pinimg.com/564x/a2/3c/e4/a23ce481993d9c10b74e1cfc6a4de001.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+}
+
+.contenedor .footer {
+    grid-area: footer;
+    height: 70px;
+    box-shadow: 0px 0px 8px 0px rgb(54, 54, 54);
+}
+
+.contenedor .recetas {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2em;
+    background: #c18031;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #c18031);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #c18031); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+}
+
+/* r1 son los class de todas las recetas */
+.r1{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.damc{
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 1px double rgb(214, 214, 214);
+    border-top: 1px double rgb(214, 214, 214);
+    padding: 10px;
+}
+
+.elaboración, .ingredientes{
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 1px double rgb(214, 214, 214);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+ol, ul, li{
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 5px;
+}
+ol{
+    border-bottom: 1px double rgb(214, 214, 214);
+}
+.listas-c{
+    font-size: 21px;
+    padding: 4px;
+    text-align: start;
+    margin-left: 5px;
+}
+
+.footer-dm{
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+}
+span{
+    color: #b6b2b2;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+   .contenedor{
+    grid-template-areas: "header header header"
+                          "contenido contenido contenido"
+                          "sidebar sidebar sidebar"
+                          "caracteristicas caracteristicas caracteristicas"
+                          "footer footer footer";
+   }
+   .contenedor .header{
+    text-align: center;
+    font-size: 1.3em;
+   }
+   .footer-dm{
+    margin-top: 30px;
+    font-size: 1em;
+   }
+}
